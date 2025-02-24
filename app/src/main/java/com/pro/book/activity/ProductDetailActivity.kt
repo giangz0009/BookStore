@@ -165,7 +165,7 @@ class ProductDetailActivity : BaseActivity() {
                 getInstance(this@ProductDetailActivity)!!.productDAO()!!
                     .updateProduct(mProduct!!)
             }
-            startActivity(this@ProductDetailActivity, CartActivity::class.java)
+//            startActivity(this@ProductDetailActivity, CartActivity::class.java)
             EventBus.getDefault().post(DisplayCartEvent())
             finish()
         }
