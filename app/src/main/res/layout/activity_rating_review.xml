@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:ignore="ContentDescription, Autofill">
+
+    <include layout="@layout/layout_toolbar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/define_dimen_10">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/ic_rating_and_review" />
+
+            <TextView
+                android:id="@+id/tv_message_review"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/define_dimen_10"
+                android:text="@string/label_rating_review_product"
+                android:textColor="@color/textColorPrimary"
+                android:textSize="@dimen/text_size_xnormal"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/define_dimen_14"
+                android:text="@string/label_rating"
+                android:textColor="@color/textColorHeading"
+                android:textSize="@dimen/text_size_normal"
+                android:textStyle="bold" />
+
+            <RatingBar
+                android:id="@+id/ratingbar"
+                style="@style/ratingbar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/define_dimen_14"
+                android:text="@string/label_review"
+                android:textColor="@color/textColorHeading"
+                android:textSize="@dimen/text_size_normal"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/edt_review"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/define_dimen_80"
+                android:layout_marginTop="@dimen/define_dimen_12"
+                android:background="@drawable/bg_white_corner_6_border_gray"
+                android:gravity="start"
+                android:hint="@string/hint_rating_review"
+                android:imeOptions="actionDone"
+                android:inputType="textMultiLine"
+                android:maxLength="1000"
+                android:padding="@dimen/define_dimen_12"
+                android:textColor="@color/textColorHeading"
+                android:textColorHint="@color/textColorAccent"
+                android:textSize="@dimen/text_size_small" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/define_dimen_12"
+                android:text="@string/label_review_note"
+                android:textColor="@color/textColorHeading"
+                android:textSize="@dimen/text_size_xsmall" />
+
+            <TextView
+                android:id="@+id/tv_send_review"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/define_dimen_40"
+                android:background="@drawable/bg_main_corner_6"
+                android:paddingStart="@dimen/define_dimen_30"
+                android:paddingTop="@dimen/define_dimen_10"
+                android:paddingEnd="@dimen/define_dimen_30"
+                android:paddingBottom="@dimen/define_dimen_10"
+                android:text="@string/label_send_review"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

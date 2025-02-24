@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "339358370142",
+    "firebase_url": "https://bookstore-32932-default-rtdb.firebaseio.com",
+    "project_id": "bookstore-32932",
+    "storage_bucket": "bookstore-32932.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:339358370142:android:f7ae6d19ef4ca73fd3e7cf",
+        "android_client_info": {
+          "package_name": "com.pro.book"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyALW-DYxS3VhMU0XnValizosUgsVQDhF5Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

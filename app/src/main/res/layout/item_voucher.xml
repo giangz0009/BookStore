@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:ignore="UseCompoundDrawables, ContentDescription">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/define_dimen_10">
+
+        <ImageView
+            android:id="@+id/img_voucher_type"
+            android:layout_width="@dimen/define_dimen_40"
+            android:layout_height="@dimen/define_dimen_40"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_sale" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/define_dimen_10"
+            android:layout_marginEnd="@dimen/define_dimen_10"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/img_voucher_type"
+            android:layout_toStartOf="@+id/img_status"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_voucher_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text_size_small"
+                android:textColor="@color/textColorHeading"
+                android:textStyle="bold"
+                android:text="@string/app_name"/>
+
+            <TextView
+                android:id="@+id/tv_voucher_minimum"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/define_dimen_2"
+                android:textSize="@dimen/text_size_xxsmall"
+                android:textColor="@color/textColorSecondary"
+                android:text="@string/app_name"/>
+
+            <TextView
+                android:id="@+id/tv_voucher_condition"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/define_dimen_2"
+                android:textSize="@dimen/text_size_xxsmall"
+                android:textColor="@color/red"
+                android:text="@string/app_name"/>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/img_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_item_unselect" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginStart="@dimen/define_dimen_10"
+        android:layout_marginEnd="@dimen/define_dimen_10"
+        android:background="@color/bgMainColor" />
+</LinearLayout>
