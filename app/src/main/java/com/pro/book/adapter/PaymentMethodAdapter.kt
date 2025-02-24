@@ -43,10 +43,22 @@ class PaymentMethodAdapter(
             holder.imgStatus.setImageResource(R.drawable.ic_item_unselect)
         }
 
-        holder.layoutItem.setOnClickListener {
-            iClickPaymentMethodListener.onClickPaymentMethodItem(
-                paymentMethod
-            )
+//        holder.layoutItem.setOnClickListener {
+//            iClickPaymentMethodListener.onClickPaymentMethodItem(
+//                paymentMethod
+//            )
+//        }
+        // Nếu đây là thanh toán tiền mặt, cho phép click; nếu không thì disable
+        if (paymentMethod.id == Constant.TYPE_GOPAY) {
+            holder.layoutItem.isEnabled = true
+            holder.layoutItem.alpha = 1f
+            holder.layoutItem.setOnClickListener {
+                iClickPaymentMethodListener.onClickPaymentMethodItem(paymentMethod)
+            }
+        } else {
+            holder.layoutItem.isEnabled = false
+            holder.layoutItem.alpha = 0.5f // Giảm độ sáng để biểu thị không khả dụng
+            holder.layoutItem.setOnClickListener(null)
         }
     }
 
